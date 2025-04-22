@@ -6,7 +6,7 @@ export default {
 		"./pages/**/*.{ts,tsx}",
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
+		"./src/**/*.{ts,tsx}"
 	],
 	prefix: "",
 	theme: {
@@ -24,6 +24,13 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				cosmic: {
+					purple: '#9b87f5',
+					blue: '#33C3F0',
+					pink: '#D946EF',
+					glow: '#6F4CFF',
+					dark: '#1A1F2C',
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -84,11 +91,27 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-20px)' },
+				},
+				'pulse-glow': {
+					'0%, 100%': { 
+						boxShadow: '0 0 15px 5px rgba(111, 76, 255, 0.4)'
+					},
+					'50%': { 
+						boxShadow: '0 0 20px 10px rgba(111, 76, 255, 0.7)'
+					},
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'float-slow': 'float 8s ease-in-out infinite',
+				'float-fast': 'float 4s ease-in-out infinite',
+				'pulse-glow': 'pulse-glow 4s ease-in-out infinite'
 			}
 		}
 	},
