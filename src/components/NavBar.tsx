@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { Telegram } from "lucide-react";
@@ -63,13 +64,13 @@ const NavBar = () => {
         </NavigationMenu>
 
         <Link 
-          to="https://t.me/vocoder" 
+          to="https://t.me/vocoders" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="flex items-center gap-2 px-4 py-2 rounded-full border border-cosmic-purple/30 hover:border-cosmic-purple/60 transition-all hover:bg-cosmic-purple/10"
         >
           <Telegram size={18} className="text-cosmic-purple" />
-          <span className="text-sm font-medium">t.me/vocoder</span>
+          <span className="text-sm font-medium">t.me/vocoders</span>
         </Link>
       </div>
     </header>
